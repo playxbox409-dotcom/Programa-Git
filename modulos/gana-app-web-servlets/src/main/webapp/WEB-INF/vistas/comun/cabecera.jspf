@@ -1,0 +1,13 @@
+<header class="encabezado">
+    <div class="marca">
+        <span class="marca__icono" aria-hidden="true">🐄</span>
+        <div>
+            <strong>GANA APP</strong>
+            <small>Gestión y comercialización ganadera</small>
+        </div>
+    </div>
+    <nav aria-label="Navegación principal">
+        <a href="${pageContext.request.contextPath}/animales">Animales</a>
+        <a href="${pageContext.request.contextPath}/animales?accion=nuevo">Registrar</a>
+    </nav>
+</header>
