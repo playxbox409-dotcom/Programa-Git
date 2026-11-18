@@ -1,0 +1,5 @@
+Repositorio público de la evidencia:
+https://github.com/playxbox409-dotcom/Programa-Git
+
+Ruta del módulo dentro del repositorio:
+modulos/gana-app-jdbc
