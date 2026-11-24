@@ -31,10 +31,10 @@
                 <input name="propietarioId" type="number" min="1" required value="${empty animal.propietarioId ? '1' : animal.propietarioId}">
             </label>
             <label>Código *
-                <input name="codigo" maxlength="30" required value="<c:out value='${animal.codigo}'/>">
+                <input name="codigo" minlength="3" maxlength="30" pattern="[A-Za-z0-9-]+" required value="<c:out value='${animal.codigo}'/>">
             </label>
             <label>Nombre *
-                <input name="nombre" maxlength="100" required value="<c:out value='${animal.nombre}'/>">
+                <input name="nombre" minlength="2" maxlength="100" required value="<c:out value='${animal.nombre}'/>">
             </label>
             <label>Especie *
                 <select name="especie" required>
@@ -46,10 +46,10 @@
                 </select>
             </label>
             <label>Raza *
-                <input name="raza" maxlength="80" required value="<c:out value='${animal.raza}'/>">
+                <input name="raza" minlength="2" maxlength="80" required value="<c:out value='${animal.raza}'/>">
             </label>
             <label>Fecha de nacimiento
-                <input name="fechaNacimiento" type="date" value="${animal.fechaNacimiento}">
+                <input name="fechaNacimiento" type="date" max="<%= java.time.LocalDate.now() %>" value="${animal.fechaNacimiento}">
             </label>
             <label>Peso en kg *
                 <input name="pesoKg" type="number" min="0.01" step="0.01" required value="${animal.pesoKg}">
@@ -58,7 +58,7 @@
                 <input name="precioCop" type="number" min="0" step="1" required value="${animal.precioCop}">
             </label>
             <label>Ubicación *
-                <input name="ubicacion" maxlength="120" required value="<c:out value='${animal.ubicacion}'/>">
+                <input name="ubicacion" minlength="2" maxlength="120" required value="<c:out value='${animal.ubicacion}'/>">
             </label>
             <label>Estado *
                 <select name="estado" required>
