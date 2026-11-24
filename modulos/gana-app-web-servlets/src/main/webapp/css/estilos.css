@@ -14,7 +14,7 @@ body { margin: 0; font-family: Inter, "Segoe UI", sans-serif; color: var(--texto
 a { color: inherit; }
 .encabezado { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 1rem max(1.2rem, calc((100% - 1180px) / 2)); background: #fff; border-bottom: 1px solid var(--borde); }
 .marca { display: flex; align-items: center; gap: .8rem; color: var(--verde); }
-.marca__icono { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--verde-claro); font-size: 1.4rem; }
+.marca__logo { display: block; width: 82px; height: 82px; object-fit: contain; flex: 0 0 auto; }
 .marca strong, .marca small { display: block; }
 .marca small { color: #60717b; margin-top: .15rem; }
 nav { display: flex; gap: .5rem; }

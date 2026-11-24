@@ -34,6 +34,8 @@ public final class AnimalServlet extends HttpServlet {
     protected void doGet(HttpServletRequest solicitud, HttpServletResponse respuesta)
             throws ServletException, IOException {
         solicitud.setCharacterEncoding("UTF-8");
+        respuesta.setCharacterEncoding("UTF-8");
+        respuesta.setContentType("text/html;charset=UTF-8");
         String accion = parametro(solicitud, "accion", "listar");
         try {
             switch (accion) {
@@ -50,6 +52,8 @@ public final class AnimalServlet extends HttpServlet {
     protected void doPost(HttpServletRequest solicitud, HttpServletResponse respuesta)
             throws ServletException, IOException {
         solicitud.setCharacterEncoding("UTF-8");
+        respuesta.setCharacterEncoding("UTF-8");
+        respuesta.setContentType("text/html;charset=UTF-8");
         String accion = parametro(solicitud, "accion", "crear");
         try {
             switch (accion) {

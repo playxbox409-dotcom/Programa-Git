@@ -1,9 +1,11 @@
 <header class="encabezado">
     <div class="marca">
-        <span class="marca__icono" aria-hidden="true">🐄</span>
+        <img class="marca__logo"
+             src="${pageContext.request.contextPath}/img/logo_gana_app.png"
+             alt="Logo de GANA APP">
         <div>
             <strong>GANA APP</strong>
-            <small>Gestión y comercialización ganadera</small>
+            <small>Gesti&oacute;n y comercializaci&oacute;n ganadera</small>
         </div>
     </div>
     <nav aria-label="Navegación principal">
