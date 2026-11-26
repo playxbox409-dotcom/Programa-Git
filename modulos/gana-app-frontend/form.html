@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Formulario de animales de GANA APP">
+    <title>Registrar animal | GANA APP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="index.html" aria-label="Ir al inventario de GANA APP">
+            <img src="assets/logo_gana_app.png" alt="Logo de GANA APP">
+            <span><strong>GANA APP</strong><small>Gestión y comercialización ganadera</small></span>
+        </a>
+        <nav aria-label="Navegación principal">
+            <a class="nav-link" href="index.html">Animales</a>
+            <a class="nav-link nav-link--active" href="form.html">Registrar</a>
+        </nav>
+    </header>
+
+    <main class="page-shell page-shell--form">
+        <a class="back-link" href="index.html">← Volver al inventario</a>
+
+        <section class="form-card" aria-labelledby="formTitle">
+            <p class="eyebrow">Módulo de animales</p>
+            <h1 id="formTitle">Registrar animal</h1>
+            <p>Los campos marcados con asterisco son obligatorios.</p>
+
+            <div id="formMessage" class="alert alert--error hidden" role="alert"></div>
+
+            <!-- El mismo formulario se reutiliza para crear y editar registros. -->
+            <form id="animalForm" class="animal-form" novalidate>
+                <label>Código *
+                    <input id="code" name="code" required minlength="3" maxlength="20"
+                           pattern="[A-Za-z0-9-]+" placeholder="Ejemplo: GNA-001">
+                    <small>Solo letras, números y guiones.</small>
+                </label>
+
+                <label>Nombre *
+                    <input id="name" name="name" required minlength="2" maxlength="60"
+                           placeholder="Nombre del animal">
+                </label>
+
+                <label>Especie *
+                    <select id="species" name="species" required>
+                        <option value="Bovino">Bovino</option>
+                        <option value="Porcino">Porcino</option>
+                        <option value="Equino">Equino</option>
+                        <option value="Ovino">Ovino</option>
+                        <option value="Caprino">Caprino</option>
+                    </select>
+                </label>
+
+                <label>Raza *
+                    <input id="breed" name="breed" required minlength="2" maxlength="60"
+                           placeholder="Ejemplo: Cebú">
+                </label>
+
+                <label>Fecha de nacimiento
+                    <input id="birthDate" name="birthDate" type="date">
+                </label>
+
+                <label>Peso en kg *
+                    <input id="weight" name="weight" type="number" required min="0.01" step="0.01"
+                           inputmode="decimal" placeholder="Ejemplo: 410">
+                </label>
+
+                <label>Precio en pesos colombianos *
+                    <input id="price" name="price" type="number" required min="1" step="1"
+                           inputmode="numeric" placeholder="Ejemplo: 2100000">
+                    <small id="formattedPrice">Valor mostrado: $ 0</small>
+                </label>
+
+                <label>Ubicación *
+                    <input id="location" name="location" required minlength="2" maxlength="80"
+                           placeholder="Ciudad o municipio">
+                </label>
+
+                <label>Estado *
+                    <select id="status" name="status" required>
+                        <option value="Disponible">Disponible</option>
+                        <option value="Reservado">Reservado</option>
+                        <option value="Vendido">Vendido</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                </label>
+
+                <div class="form-actions">
+                    <a class="button button--secondary" href="index.html">Cancelar</a>
+                    <button id="submitButton" class="button button--primary" type="submit">Guardar animal</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="app-footer">GANA APP · Módulo front-end del proyecto formativo</footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

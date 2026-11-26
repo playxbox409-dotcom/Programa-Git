@@ -1,0 +1,9 @@
+# Archivos generados por el sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Dependencias y resultados temporales
+node_modules/
+dist/
+*.log

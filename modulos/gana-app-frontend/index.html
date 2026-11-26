@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Inventario ganadero de GANA APP">
+    <title>Animales | GANA APP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Encabezado compartido del módulo de animales. -->
+    <header class="app-header">
+        <a class="brand" href="index.html" aria-label="Ir al inventario de GANA APP">
+            <img src="assets/logo_gana_app.png" alt="Logo de GANA APP">
+            <span><strong>GANA APP</strong><small>Gestión y comercialización ganadera</small></span>
+        </a>
+        <nav aria-label="Navegación principal">
+            <a class="nav-link nav-link--active" href="index.html">Animales</a>
+            <a class="nav-link" href="form.html">Registrar</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="page-heading" aria-labelledby="page-title">
+            <div>
+                <p class="eyebrow">Inventario ganadero</p>
+                <h1 id="page-title">Animales registrados</h1>
+                <p>Consulta, edita y elimina los animales de tu inventario.</p>
+            </div>
+            <a class="button button--primary" href="form.html">+ Registrar animal</a>
+        </section>
+
+        <!-- Las tarjetas se actualizan desde js/list.js con datos de localStorage. -->
+        <section class="summary" aria-label="Resumen del inventario">
+            <article><strong id="totalAnimals">0</strong><span>Total de animales</span></article>
+            <article><strong id="availableAnimals">0</strong><span>Disponibles</span></article>
+            <article><strong id="inventoryValue">$ 0</strong><span>Valor del inventario</span></article>
+        </section>
+
+        <div id="operationMessage" class="alert alert--success hidden" role="status"></div>
+
+        <section id="emptyState" class="empty-state hidden" aria-live="polite">
+            <span class="empty-state__icon" aria-hidden="true">🐮</span>
+            <h2>Aún no tienes animales registrados</h2>
+            <p>Registra el primer animal para comenzar a gestionar tu inventario.</p>
+            <a class="button button--primary" href="form.html">Registrar animal</a>
+        </section>
+
+        <section id="animalList" class="animal-grid" aria-label="Listado de animales"></section>
+    </main>
+
+    <footer class="app-footer">GANA APP · Módulo front-end del proyecto formativo</footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/list.js"></script>
+</body>
+</html>
