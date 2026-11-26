@@ -13,6 +13,10 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * Controlador web del módulo de animales. Atiende las solicitudes GET y POST,
+ * delega las reglas de negocio al servicio y selecciona la vista JSP adecuada.
+ */
 @WebServlet(name = "animalServlet", urlPatterns = "/animales")
 public final class AnimalServlet extends HttpServlet {
 

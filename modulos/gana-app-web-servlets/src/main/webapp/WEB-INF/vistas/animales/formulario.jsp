@@ -10,6 +10,7 @@
 </head>
 <body>
 <%@ include file="../comun/cabecera.jspf" %>
+<!-- Formulario reutilizado para registrar y editar animales del inventario. -->
 <main class="contenedor contenedor--estrecho">
     <a class="volver" href="${pageContext.request.contextPath}/animales">← Volver al inventario</a>
     <section class="formulario-tarjeta">

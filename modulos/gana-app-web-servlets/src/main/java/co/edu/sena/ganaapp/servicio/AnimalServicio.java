@@ -8,6 +8,10 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Aplica las validaciones del inventario antes de invocar la persistencia JDBC.
+ * Esta separación evita que la interfaz y el repositorio dupliquen reglas.
+ */
 public final class AnimalServicio {
 
     private final AnimalRepositorio repositorio;

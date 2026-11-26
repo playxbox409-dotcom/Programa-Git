@@ -10,6 +10,7 @@
 </head>
 <body>
 <%@ include file="../comun/cabecera.jspf" %>
+<!-- Vista del inventario: JSTL decide entre el estado vacío y la tabla de animales. -->
 <main class="contenedor">
     <section class="titulo-pagina">
         <div>
